@@ -176,3 +176,44 @@
 	content: " ";
 	display: table;
 }
+
+
+@media (max-width:780px) {
+	
+/* RESPONSIVE TABLE */
+  table{
+      display:grid; grid-template-columns:auto 2fr; justify-content:stretch; align-items:start;
+      grid-gap:.7em;
+  }
+  thead tr{
+      display:table-row-group;
+  }
+  thead a {
+    display: block; width: 100%;
+  }
+  tbody {
+      display: grid; grid-auto-flow: column;
+      overflow: hidden; overflow-x: auto;
+  }
+  tbody tr { display:table-row-group; width:100%; }
+  thead th { font-weight: 400; text-align: right!important; }
+  thead th{
+      display:block; width:calc(100% - 10px)!important;
+      white-space: nowrap;
+      font-size-adjust: auto;
+    }
+  tbody td{
+        display:block; width:calc(100% - 20px);
+        white-space: nowrap;
+        font-size-adjust: auto;
+      }
+
+  .dataTable-wrapper { display: grid; grid-template-columns:1fr; grid-template-rows:auto 1fr auto; }
+  .dataTable-top .dataTable-dropdown select { background:rgba(0,0,0,.05); outline:none; color:rgba(0,0,0,.7); font-weight:400; }
+  .dataTable-top .dataTable-search input { border:1px solid rgba(0,0,0,.2); border-radius:3px; }
+  .dataTable-bottom .dataTable-info { color:rgba(0,0,0,.5); }
+  /*
+  .dataTable-bottom .dataTable-pagination { width:80vw; overflow: hidden; overflow-x: auto; display:grid; grid-auto-flow: column; }
+  .dataTable-bottom .dataTable-pagination .pager { background:rgba(0,0,200,.4); }
+  */
+}
